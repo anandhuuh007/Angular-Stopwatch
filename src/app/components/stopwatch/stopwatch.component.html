@@ -1,1 +1,35 @@
-<p>stopwatch works!</p>
+<div class="stopwatch">
+
+  <h1>Focus Timer</h1>
+  <p>Stay focused. Make every second count.</p>
+
+  <div class="timer">
+
+    <div class="time-box">
+      <div class="number">{{hours < 10 ? '0'+hours:hours}}</div> 
+      <span>Hours</span>
+    </div>
+
+    <div class="colon">:</div>
+
+    <div class="time-box">
+      <div class="number">{{min < 10 ? '0' + min : min }}</div>
+      <span>Minutes</span>
+    </div>
+
+    <div class="colon">:</div>
+
+    <div class="time-box">
+      <div class="number">{{ seconds < 10 ? '0' + seconds : seconds }}</div>
+      <span>Seconds</span>
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <button class="start" (click)="StartTimer()">▶ Start</button>
+    <button class="pause" (click)="Pause()">Ⅱ Pause</button>
+    <button class="reset" (click)="Reset()">↻ Reset</button>
+  </div>
+
+</div>

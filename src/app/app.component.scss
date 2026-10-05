@@ -1,0 +1,11 @@
+.main {
+  min-height: calc(100vh - 90px);
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(102, 127, 240, 0.20),
+      transparent 35%
+    ),
+    linear-gradient(180deg, #0b1224 0%, #070b14 100%);
+}

@@ -1,25 +1,25 @@
 <div class="stopwatch">
 
-  <h1>Focus Timer</h1>
+  <h1>StopWatch</h1>
   <p class="motive">ബുക്ക് എടുക്കടാ നായേ...</p>
 
   <div class="timer">
 
-    <div class="time-box">
+    <div class="time-box" [class.paused]="isPaused">
       <div class="number">{{hours < 10 ? '0'+hours:hours}}</div> 
       <span>Hours</span>
     </div>
 
     <div class="colon">:</div>
 
-    <div class="time-box">
+    <div class="time-box" [class.paused]="isPaused">
       <div class="number">{{min < 10 ? '0' + min : min }}</div>
       <span>Minutes</span>
     </div>
 
     <div class="colon">:</div>
 
-    <div class="time-box">
+    <div class="time-box" [class.paused]="isPaused">
       <div class="number">{{ seconds < 10 ? '0' + seconds : seconds }}</div>
       <span>Seconds</span>
     </div>

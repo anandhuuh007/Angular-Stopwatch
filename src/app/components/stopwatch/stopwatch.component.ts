@@ -12,11 +12,13 @@ export class StopwatchComponent {
   min=0;
   seconds=0;
   timer:any;
+  isPaused=false;
 
   StartTimer(){
     if(this.timer){
       return;
     }
+    this.isPaused=false;
     this.timer=setInterval(() => {
       this.seconds=this.seconds+1;    // for incremneting seconds
       if(this.seconds===60){          // check if seconds reach 60 then what ?
@@ -32,7 +34,8 @@ export class StopwatchComponent {
 
   Pause(){
     clearInterval(this.timer);        // clearIntervel used to stop the intervel where it is running now
-    this.timer=null;                  // since we stopped and we need to resume we are tellign to delete the intervel and create a new intervel (will note affect the stowatch) 
+    this.timer=null; 
+    this.isPaused=true;               // since we stopped and we need to resume we are tellign to delete the intervel and create a new intervel (will note affect the stowatch) 
   }
 
   Reset(){

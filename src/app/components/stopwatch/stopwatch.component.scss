@@ -13,6 +13,7 @@
   margin: 0;
   font-size: 66px;
   color: #9dafb6;
+  font-weight: bold;
 
 }
 
@@ -89,4 +90,62 @@
 
 .buttons button:hover {
   opacity: 0.85;
+}
+  .time-box.paused {
+  background: rgba(255, 0, 0, 0.25);
+  border-color: rgb(137, 4, 4);
+  }
+
+@media (max-width: 768px) {
+
+  .stopwatch {
+    min-height: calc(100vh - 70px);
+    padding: 30px 10px;
+  }
+
+  .stopwatch h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .stopwatch p {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0 40px;
+  }
+
+  .timer {
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .time-box {
+    width: 28vw;
+    height: 130px;
+    border-radius: 16px;
+  }
+
+  .number {
+    font-size: 42px;
+  }
+
+  .time-box span {
+    font-size: 11px;
+  }
+
+  .colon {
+    font-size: 35px;
+  }
+
+  .buttons {
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .buttons button {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+
 }
